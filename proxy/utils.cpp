@@ -43,6 +43,16 @@ std::string utils::generate_rid() {
 
     return rid_str;
 }
+std::string utils::generate_klv() {
+    std::string klv_str;
+
+    for (int i = 0; i < 16; i++)
+        klv_str += utils::hex_str(utils::random(0, 255));
+
+    std::transform(klv_str.begin(), klv_str.end(), klv_str.begin(), ::toupper);
+
+    return klv_str;
+}
 uint32_t utils::hash(uint8_t* str, uint32_t len) {
     if (!str)
         return 0;

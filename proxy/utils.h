@@ -26,6 +26,7 @@ namespace utils {
     gameupdatepacket_t* get_struct(ENetPacket* packet);
     int random(int min, int max);
     std::string generate_rid();
+    std::string generate_klv();
     uint32_t hash(uint8_t* str, uint32_t len);
     std::string generate_mac(const std::string& prefix = "02");
     std::string hex_str(unsigned char data);
